@@ -1,0 +1,426 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'biko';
+    src: url('fonts/Biko_Regular.otf');
+}
+
+html * {
+    margin: 0;
+    padding: 0;
+    font-family: biko, sans-serif;
+    font-weight: 100;
+    color: #4ab94d;
+}
+
+html {
+    height : 100%;
+}
+
+body {
+    background-color: #2b2b2b;
+    height: 100%;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #474747;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #474747;
+    opacity: 1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #474747;
+    opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #474747;
+}
+
+input {
+    font-size: 36px;
+}
+
+a:visited {
+    color: inherit;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+section, aside {
+    background-color: #212121;
+    box-shadow: 0 0 22px 0 black;
+    min-height: 100%;
+}
+
+aside {
+    position: fixed;
+    z-index: 3;
+    height: 100%;
+
+    -webkit-transition: width 0.3s;
+    -moz-transition: width 0.3s;
+    -ms-transition: width 0.3s;
+    -o-transition: width 0.3s;
+    transition: width 0.3s;
+}
+
+aside header, section header {
+    width: calc(100% - 30px * 2);
+    height: 80px;
+    padding: 10px 0;
+    margin: auto;
+    text-align: right;
+    color: #4ab94d;
+    letter-spacing: 5px;
+}
+
+aside header #menuButton {
+    float: left;
+
+    -webkit-transition: margin-left 0.3s;
+    -moz-transition: margin-left 0.3s;
+    -ms-transition: margin-left 0.3s;
+    -o-transition: margin-left 0.3s;
+    transition: margin-left 0.3s;
+}
+
+aside header #menuButton hr {
+    height: 3px;
+    width: 20px;
+    margin-top: 5px;
+    border: none;
+
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+aside #menuClose {
+    transform: rotate(45deg);
+    color: #4ab94d;
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 30px;
+    font-family: Arial, sans-serif;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+aside #boutonAjouterSource{
+    background-color: white;
+    text-decoration: none;
+    text-indent: 10px;
+    font-size: 36px;
+    display: block;
+    width: 100%;
+    margin-bottom: 1px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    color: #2b2b2b;
+    overflow: hidden;
+}
+
+aside #addSrc {
+    overflow: hidden;
+    background-color: white;
+    height: 0;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
+}
+
+aside #addSrc .mail {
+    display: none;
+}
+
+aside #addSrc label{
+    color: #2b2b2b;
+}
+
+aside #addSrc input {
+    border: 0;
+    height: 50px;
+    text-indent: 15px;
+    width: 100%;
+}
+
+aside #addSrc input[type="submit"] {
+    border: none;
+    background-color: white;
+    text-decoration: none;
+    text-indent: 10px;
+    font-size: 36px;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 1px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    color: #2b2b2b;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+aside #boutonCreerCat {
+    background-color: white;
+    text-decoration: none;
+    text-indent: 10px;
+    font-size: 36px;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 1px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    color: #2b2b2b;
+    margin-top: 5px;
+}
+
+aside #formCat {
+    background-color: white;
+    height: 0;
+    overflow: hidden;
+
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
+}
+
+aside #formCat input {
+    border: 0;
+    height: 50px;
+}
+
+aside #nomCat {
+    text-indent: 10px;
+    width: 100%;
+}
+
+aside #couleur {
+    width: 100%;
+    overflow: hidden;
+}
+
+aside #boutonCreerCat{
+    width: 100%;
+    cursor: pointer;
+}
+
+aside #listeCategories {
+    margin-top: 5px;
+    overflow-y: scroll;
+    min-height: 50px;
+    text-indent: 15px;
+    max-height: 500px;
+}
+
+aside #listeCategories li div {
+    color: #212121;
+}
+
+aside #selectionCat input {
+    display: none;
+}
+
+aside .caseCategorie {
+    font-size: 36px;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    text-indent: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+aside .boutonSupprimerCat {
+    color: #911d00;
+    display: block;
+    font-family: Arial,sans-serif;
+    font-size: 30px;
+    font-weight: 100;
+    line-height: 15px;
+    margin-left: 90%;
+    margin-top: -15px;
+    overflow: hidden;
+    text-decoration: none;
+    transform: rotate(45deg);
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+aside #parcoursBlogs {
+    overflow: hidden;
+    width: 100%;
+    display: block;
+}
+
+section {
+    position: relative;
+    z-index: 2;
+    color: #4ab94d;
+    margin: auto;
+    width: 800px;
+}
+section table input {   /* pour Admin */
+    font-size: inherit;
+}
+
+section header .avatar {
+    float: left;
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+section header h2 {
+    float: left;
+    font-size: 40px;
+    line-height: 80px;
+    margin-left: 20px;
+}
+
+#deconnect {
+    text-align: right;
+    display: inline-block;
+    height: 40px;
+    padding: 20px 0;
+}
+
+#redigerArticle {
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
+}
+
+#nouvelArticle {
+    width: 100%;
+    height: 50px;
+    border: 0;
+    text-indent: 15px;
+}
+
+#corpsNouvelArticle {
+    padding-top: 5px;
+    margin-top: 1px;
+    max-width: 100%;
+    min-width: 100%;
+
+    min-height: 200px;
+    max-height: 700px;
+    border: 0;
+    text-indent: 15px;
+}
+
+#insererImage {
+    position: absolute;
+    right: 100px;
+    bottom: 7px;
+    display: none;
+}
+
+#uploadImg {
+    display: none;
+}
+
+#boutonEnregistrer {
+    position: absolute;
+    border: 0;
+    right: 10px;
+    bottom: 7px;
+    height: 30px;
+    width: 80px;
+    font-size: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+#nouvelArticle {
+    width: 100%;
+    height: 50px;
+    border: 0;
+    text-indent: 15px;
+}
+
+.line {
+    padding-top: 40px;
+    height: 220px;
+}
+
+.line article {
+    float: left;
+    text-decoration: none;
+    width: 200px;
+    height: 100%;
+    margin: 0 30px;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+
+.line article.long {
+    width: 100%;
+    margin: 0;
+}
+
+.line h3 {
+    position: absolute;
+    bottom: 0;
+    background-color: #212121;
+    width: 100%;
+    font-size: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+h1 {
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    right: 40px;
+    color: #212121;
+    font-size: 50px;
+}
+
+#ancre {
+    position: fixed;
+    z-index: 1;
+    bottom: 40px;
+    right: 100px;
+    height: 40px;
+    width: 40px;
+}

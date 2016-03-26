@@ -1,0 +1,10 @@
+section ul * {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+}
+
+.categorie {
+    background-color: #4ab94d;
+    color: #212121;
+}

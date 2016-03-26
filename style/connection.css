@@ -1,0 +1,169 @@
+@charset "utf-8";
+@font-face {
+    font-family: Biko;
+    src: url("fonts/Biko_Regular.otf");
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes anim {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Standard syntax */
+@keyframes anim {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+html * {
+    margin: 0;
+    padding: 0;
+    font-family: Biko, sans-serif;
+    font-weight: 100;
+    color: #212121;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: #4ab94d;
+    animation: anim 1s;
+    -webkit-animation: anim 1s;
+    -moz-animation: anim 1s;
+    -o-animation: anim 1s;
+}
+
+#filter {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/site/back_connect.jpg");
+    background-size: cover;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+h1 {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-size: 25vh;
+    line-height: 35vh;
+}
+
+h2 {
+    position: relative;
+    z-index:2 ;
+    text-align: center;
+    font-size: 10vh;
+    line-height: 30vh;
+}
+
+#box {
+    background-color: #212121;
+    box-shadow: 0 0 22px 0 black;
+    width: 110vh;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+#box h2 {
+    color: #4ab94d;
+    font-size: 5vh;
+    line-height: 9vh;
+    text-align: center;
+}
+
+#box form {
+    display: inline-block;
+    width: calc(50% - 1px); /*border*/
+    vertical-align: top;
+}
+
+#box form input {
+    border: none;
+    height: 5vh;
+    margin-bottom: 3vh;
+    width: 100%;
+    font-size: 3.5vh;
+    background-color: #f3f0f4;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #474747;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #474747;
+    opacity: 1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #474747;
+    opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #474747;
+}
+
+#box form input[type=submit] {
+    background-color: #4ab94d;
+}
+
+#connect {
+    border-right: solid #4ab94d 2px;
+    position: relative;
+    z-index: 3;
+}
+
+#connect input[type=email], #connect input[type=password] {
+    width: 200%;
+    text-align: center;
+}
+
+#connect .g-recaptcha div div {
+    margin: calc(6.5vh - 39px) auto calc(9.5vh - 39px) auto;
+}
+
+#connect input[type=submit] {
+    border-right: solid #212121 2px;
+    width: calc(100% + 2px);
+}
+
+#connect a {
+    color: #4ab94d;
+    font-size: 3.5vh;
+    text-decoration: underline;
+    margin-left: 2vh;
+    margin-bottom: 1vh;
+}
+
+#inscript input[type=email], #inscript input[type=password] {
+    display: none;
+}
+
+#inscript input[placeholder=Prenom] {
+    margin-top: 16vh;
+}
+
+#inscript input[type=text] {
+    text-indent: 8px;
+}
+
+#presentation {
+    text-align: center;
+}
